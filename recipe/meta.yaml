@@ -1,5 +1,5 @@
 {% set name = "transfocate" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/pcdshub/transfocate/archive/v{{ version }}.tar.gz
-  sha256: 54d21da8d5860f7527d388ba0523c7410fe30133ecb821bd50fa542e155af781
+  sha256: 2373eb3eefe5963e374f1d061af35854d1ce641469effa207019a24af335cbaf
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -23,13 +23,17 @@ requirements:
     - bluesky
     - databroker
     - numpy
+    - openpyxl
     - ophyd >=1.5.0
+    - pandas
     - pcdsdevices >=4.0.0
     - prettytable
+    - reportlab
 
 test:
   imports:
     - transfocate
+    - transfocate.automated_checkout
 
 about:
   home: https://github.com/pcdshub/transfocate
