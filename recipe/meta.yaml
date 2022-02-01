@@ -33,7 +33,6 @@ requirements:
 test:
   imports:
     - transfocate
-    - transfocate.automated_checkout
 
 about:
   home: https://github.com/pcdshub/transfocate
