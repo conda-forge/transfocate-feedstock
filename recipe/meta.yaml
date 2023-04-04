@@ -1,5 +1,5 @@
 {% set name = "transfocate" %}
-{% set version = "0.5.6" %}
+{% set version = "0.5.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pcdshub/transfocate/archive/v{{ version }}.tar.gz
-  sha256: 67d75a4e7712aecd68a32e32fc382ec3eb1aed7c27fd093d56a0e384d6efa6a2
+  sha256: e4fdf61b219fd07c4d6b2f4dfccb2b2591a8db029e7f94a63e7c65afb01408f3
 
 build:
   noarch: python
