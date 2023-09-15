@@ -23,6 +23,7 @@ requirements:
     - python >=3.9
     - bluesky
     - databroker
+    - matplotlib-base
     - numpy
     - openpyxl
     - ophyd >=1.5.0
