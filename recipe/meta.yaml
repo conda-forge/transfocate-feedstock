@@ -1,5 +1,5 @@
 {% set name = "transfocate" %}
-{% set version = "0.5.8" %}
+{% set version = "0.5.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/pcdshub/transfocate/archive/v{{ version }}.tar.gz
-  sha256: 12fcb4ab418c6037c853cc0f424acfe8127f8932b2152d040d6fbf5663739451
+  sha256: 33ad7f0d45a656135e890302079726a1044800c2b57be78b912d5ee4903a59c6
 
 build:
   noarch: python
@@ -18,11 +18,11 @@ requirements:
   host:
     - python >=3.9
     - pip
+    - setuptools
     - setuptools_scm
   run:
     - python >=3.9
-    - bluesky
-    - databroker
+    - bluesky-base
     - matplotlib-base
     - numpy
     - openpyxl
@@ -48,6 +48,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/pcdsdevices
-    - klauer
-    - tangkong
-    - zllentz
