@@ -11,17 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - bluesky-base
     - matplotlib-base
     - numpy
@@ -33,6 +33,8 @@ requirements:
     - reportlab
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - transfocate
 
